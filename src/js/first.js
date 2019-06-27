@@ -30,7 +30,6 @@ $(function(){
         }).responseJSON;
     }
 
-
     // set form action
     var formBook = $('#addBook');
     formBook.on('submit', function(e){
@@ -75,11 +74,7 @@ $(function(){
                 '</div>' +
                 '</div>');
 
-
-
             var formBook = row.find('.bookForm');
-
-
 
             formBook.on('submit',function(e){
                 e.preventDefault();
@@ -87,22 +82,14 @@ $(function(){
                 refreshBooks();
             });
 
-
             // dodwanie zadarzenia do elementu listy
             row.find('.book-title').on('click', function () {
                 var collapse = $(this).parent().parent().parent().find('.collapse');
                 var ajaxResult = ajax(this);
-                // var description =
-                //     'id : '+ ajaxResult.id + '<br><br>'+
-                //     'isbn : '+ ajaxResult.isbn +'<br>'+
-                //     'author : '+ ajaxResult.author +'<br>'+
-                //     'publisher : '+ ajaxResult.publisher +'<br>'+
-                //     'type : '+ ajaxResult.type;
 
                 var bookForm =collapse.find('.bookForm');
 
                 console.log(bookForm);
-
 
                 if (collapse.css('display') === 'none') {
                     collapse.css('display', 'block');
@@ -129,5 +116,4 @@ $(function(){
     }
 
     refreshBooks();
-
 });
