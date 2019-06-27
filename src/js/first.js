@@ -57,11 +57,11 @@ $(function(){
                 '<div class="card-body">' +
                 '<form class = "bookForm" data-url="/books/'+element.id+'" data-type="PUT">'+
                 '<div class="form-group row"><label for="bookId" class="col-sm-2 col-form-label">id</label><div class="col-sm-3">'+
-                '<input type="text" class="form-control" id="bookId" placeholder="bookId" name="id"></div></div>'+
+                '<input type="text" readonly class="form-control" id="bookId" placeholder="bookId" name="id"></div></div>'+
                 '<div class="form-group row"><label for="bookIsbn" class="col-sm-2 col-form-label">isbn</label><div class="col-sm-3">'+
                 '<input type="text" class="form-control" id="bookIsbn" placeholder="bookIsbn" name="isbn"></div></div>'+
                 '<div class="form-group row"><label for="bookTitle" class="col-sm-2 col-form-label">title</label><div class="col-sm-3">'+
-                '<input type="text" class="form-control" id="bookTitle" placeholder="bookTitle" name="title"></div></div>'+
+                '<input minlength="2" type="text" class="form-control" id="bookTitle" placeholder="bookTitle" name="title"></div></div>'+
                 '<div class="form-group row"><label for="bookAuthor" class="col-sm-2 col-form-label">author</label><div class="col-sm-3">'+
                 '<input type="text" class="form-control" id="bookAuthor" placeholder="bookAuthor" name="author"></div></div>'+
                 '<div class="form-group row"><label for="bookPublisher" class="col-sm-2 col-form-label">publisher</label><div class="col-sm-3">'+
